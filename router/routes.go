@@ -15,6 +15,30 @@ func InicializeRoutes(router *gin.Engine) {
 				"message": "GET opening",
 			})
 		})
+
+		v1.POST("/opening", func(context *gin.Context) {
+			context.JSON(http.StatusOK, gin.H{
+				"message": "POST opening",
+			})
+		})
+
+		v1.PUT("/opening", func(context *gin.Context) {
+			context.JSON(http.StatusOK, gin.H{
+				"message": "PUT opening",
+			})
+		})
+
+		v1.DELETE("/opening", func(context *gin.Context) {
+			context.JSON(http.StatusOK, gin.H{
+				"message": "DELETE opening",
+			})
+		})
+
+		v1.GET("/openings", func(context *gin.Context) {
+			context.JSON(http.StatusOK, gin.H{
+				"message": "GET openings",
+			})
+		})
 	}
 	
 }
