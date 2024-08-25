@@ -7,6 +7,8 @@ import (
 )
 
 func CreateOpeningHandler(context *gin.Context) {
+
+	
 	context.JSON(http.StatusOK, gin.H{
 		"message": "Handler POST opening",
 	})
