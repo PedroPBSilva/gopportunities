@@ -18,6 +18,7 @@ import (
 // @Param id query string true "Opening key"
 // @Success 200 {object} DeleteOpeningResponse
 // @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
 // @Failure 500 {object} ErrorResponse
 // @Router /opening [delete]
 func DeleteOpeningHandler(context *gin.Context) {

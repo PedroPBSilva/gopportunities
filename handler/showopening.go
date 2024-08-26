@@ -18,6 +18,7 @@ import (
 // @Param id query string true "Opening key"
 // @Success 200 {object} ShowOpeningResponse
 // @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
 // @Failure 500 {object} ErrorResponse
 // @Router /opening [get]
 func ShowOpeningHandler(context *gin.Context) {
