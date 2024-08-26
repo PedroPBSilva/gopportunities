@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/PedroPBSilva/gopportunities.git/schemas"
 	"github.com/gin-gonic/gin"
 )
 
@@ -23,4 +24,16 @@ func sendSucess(context *gin.Context, op string, data interface{}) {
 		"message": fmt.Sprintf("Operation from handler: %s successfull", op),
 		"data": data,
 	})
+}
+
+type ErrorResponse struct {
+	Status string `json:"status"`
+	Message string `json:"message"`
+	ErrorCode string `json:"errorCode"`
+}
+
+type CreateOpeningResponse struct {
+	Status string `json:"status"`
+	Message string `json:"message"`
+	Date schemas.OpeningResponse `json:"data"`
 }
